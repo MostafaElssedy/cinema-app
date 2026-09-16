@@ -3,6 +3,8 @@
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\AdminMovieController;
 use App\Http\Controllers\AdminProfileController;
+use App\Http\Controllers\AdminShowtimeController;
+use App\Http\Controllers\AdminTheaterController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ChatbotController;
 use App\Http\Controllers\PublicMovieController;
@@ -20,6 +22,9 @@ Route::get('/booking/ticket/{reference}', [BookingController::class, 'ticket'])-
 
 // Chatbot AI Route
 Route::post('/chatbot/send', [ChatbotController::class, 'chat'])->name('chatbot.send');
+
+// Auth Login Alias
+Route::get('/login', fn () => redirect()->route('admin.login'))->name('login');
 
 // Admin Auth Routes
 Route::get('/admin/login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
@@ -40,4 +45,10 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/movies/{id}/edit', [AdminMovieController::class, 'edit'])->name('movies.edit');
     Route::put('/movies/{id}', [AdminMovieController::class, 'update'])->name('movies.update');
     Route::delete('/movies/{id}', [AdminMovieController::class, 'destroy'])->name('movies.destroy');
+
+    // Admin Showtimes & Scheduling Routes
+    Route::resource('showtimes', AdminShowtimeController::class);
+
+    // Admin Theaters Routes
+    Route::resource('theaters', AdminTheaterController::class);
 });

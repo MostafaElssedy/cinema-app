@@ -57,9 +57,14 @@
                     <span>Dashboard & Movies</span>
                 </a>
 
-                <a href="{{ route('admin.movies.create') }}" class="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold {{ request()->routeIs('admin.movies.create') ? 'bg-red-600 text-white shadow-lg shadow-red-600/30' : 'text-slate-400 hover:text-white hover:bg-slate-800/60' }} transition-all">
-                    <i class="fa-solid fa-plus-circle text-lg"></i>
-                    <span>Add New Movie</span>
+                <a href="{{ route('admin.showtimes.index') }}" class="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold {{ request()->routeIs('admin.showtimes.*') ? 'bg-red-600 text-white shadow-lg shadow-red-600/30' : 'text-slate-400 hover:text-white hover:bg-slate-800/60' }} transition-all">
+                    <i class="fa-regular fa-clock text-lg"></i>
+                    <span>Manage Showtimes</span>
+                </a>
+
+                <a href="{{ route('admin.theaters.index') }}" class="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold {{ request()->routeIs('admin.theaters.*') ? 'bg-red-600 text-white shadow-lg shadow-red-600/30' : 'text-slate-400 hover:text-white hover:bg-slate-800/60' }} transition-all">
+                    <i class="fa-solid fa-couch text-lg"></i>
+                    <span>Cinema Theaters</span>
                 </a>
 
                 <a href="{{ route('admin.profile.edit') }}" class="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold {{ request()->routeIs('admin.profile.edit') ? 'bg-red-600 text-white shadow-lg shadow-red-600/30' : 'text-slate-400 hover:text-white hover:bg-slate-800/60' }} transition-all">

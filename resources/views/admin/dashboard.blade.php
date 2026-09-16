@@ -90,6 +90,10 @@
                 <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-xs"></i>
             </form>
 
+            <a href="{{ route('admin.showtimes.create') }}" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white font-semibold text-xs border border-slate-700 whitespace-nowrap flex items-center gap-1.5 transition-colors">
+                <i class="fa-regular fa-clock text-red-500"></i> Schedule Show
+            </a>
+
             <a href="{{ route('admin.movies.create') }}" class="px-4 py-2 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-xs shadow-lg shadow-red-600/20 whitespace-nowrap flex items-center gap-1.5 transition-colors">
                 <i class="fa-solid fa-plus"></i> Add Movie
             </a>

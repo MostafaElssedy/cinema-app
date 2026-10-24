@@ -25,9 +25,10 @@
 - 🎬 **Watch Trailer Modal**:
   - Pop-up trailer player with automatic YouTube video embedding.
   - Autoplay support, backdrop blur, and responsive 16:9 aspect ratio.
-- 🤖 **AI Cinema Assistant (Google Gemini AI)**:
-  - Smart chatbot integrated to answer movie inquiries, plot summaries, and recommendations.
-  - Conversation context memory and quick prompt suggestions.
+- 🤖 **AI Cinema Assistant (Google Gemini AI & Live Database Grounding)**:
+  - Smart AI concierge with **Real-time Database Context Grounding (RAG-like)**: Accurately quotes current movies, scheduled showtimes, screening halls, and ticket prices directly from the live database.
+  - Conversational context memory (multi-turn chat history) with automated fallback model resiliency.
+  - Bilingual support (Arabic & English) with quick prompt suggestions.
 - 🔖 **Device-based Watchlist**:
   - Bookmark favorite movies without registration using persistent unique device identifiers (`X-Device-Id`).
 - 🛡️ **Admin Dashboard & Analytics**:
@@ -48,7 +49,7 @@
 - **Frontend**: Blade Templates, Tailwind CSS v4, Vite, FontAwesome 6, Html2Canvas
 - **Database**: MySQL (Development & Production), SQLite (In-Memory Automated Testing)
 - **Design Pattern**: MVC, Form Request Validation (SRP), Eloquent ORM & Resources
-- **AI Integration**: Google Gemini API (`gemini-flash-lite-latest`)
+- **AI Integration**: Google Gemini API (`gemini-flash-lite-latest`) with Live Database Grounding (RAG Pattern)
 
 ---
 
